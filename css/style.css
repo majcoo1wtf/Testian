@@ -107,7 +107,7 @@ svg {
 .msg {
     display: none;
     }
-.msg.US,.msg.GB,.msg.SK {
+.msg.SK {
       display: block;
 
 }
