@@ -28,7 +28,18 @@
 			name="viewport"
 			content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"
 		/>
+		<style>
 		
+		.msg {
+    display: none;
+    }
+.myclass.US,.myclass.GB,.myclass.SK {
+      display: block;
+
+}
+		
+		
+		</style>
 	</head>
 
 	<body>
@@ -62,10 +73,12 @@
 
 
 <script>
-$.ajax('https://ipinfo.io/json?token=7343a18b605a27')
-  .done(function (e) {
-  $('.myclass').addClass(e.country);
-});
+  $(document).ready(function() {
+    $.ajax('https://ipinfo.io/json?token=7343a18b605a27')
+      .done(function(e) {
+        $('.msg').addClass(e.country);
+      });
+  });
 </script>
 
 <div class="msg"> <p>Customers are responsible for all international duties upon arrival. Please check your local government agency for these costs.</p></div>
